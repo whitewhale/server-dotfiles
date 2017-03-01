@@ -3,7 +3,7 @@
 # change to directory script executes in
 cd "$(dirname "$0")"
 
-FILES=bashrc,bash_aliases,vimrc
+FILES=profile,bashrc,bash_aliases,vimrc
 CWD=$(pwd)
 
 IFS=','
