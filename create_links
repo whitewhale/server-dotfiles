@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+# change to directory script executes in
+cd "$(dirname "$0")"
+
+FILES=bashrc,bash_aliases,vimrc
+CWD=$(pwd)
+
+IFS=','
+for FILE in $FILES; do
+    if [ -r ".$FILE" ] && [ -f ".$FILE" ]
+    then
+        if [ -a "$HOME/.$FILE" ]
+        then
+            rm "$HOME/.$FILE"
+        fi
+        ln -s "$CWD/.$FILE" "$HOME/.$FILE"
+        echo "$HOME/.$FILE linked to $CWD/.$FILE"
+    fi
+done;
