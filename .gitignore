@@ -1,0 +1,9 @@
+# Ignore everything
+*
+
+# Except . . .
+!.gitignore
+!.bashrc
+!.bash_aliases
+!.vimrc
+!README.md
