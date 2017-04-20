@@ -3,18 +3,17 @@
 # change to directory script executes in
 cd "$(dirname "$0")"
 
-FILES=profile,bashrc,bash_aliases,vimrc
+FILES=profile,aliases,paths,exports,bashrc,zshrc,vimrc
 CWD=$(pwd)
 
 IFS=','
 for FILE in $FILES; do
-    if [ -r ".$FILE" ] && [ -f ".$FILE" ]
-    then
+    if [ -r "$FILE" ] && [ -f "$FILE" ]; then
         if [ -a "$HOME/.$FILE" ]
         then
             rm "$HOME/.$FILE"
         fi
-        ln -s "$CWD/.$FILE" "$HOME/.$FILE"
-        echo "$HOME/.$FILE linked to $CWD/.$FILE"
+        ln -s "$CWD/$FILE" "$HOME/.$FILE"
+        echo "$HOME/.$FILE linked to $CWD/$FILE"
     fi
 done;
