@@ -8,6 +8,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
+Plugin 'lifepillar/vim-solarized8'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
@@ -38,9 +39,10 @@ call vundle#end()  " required
 
 " colors
 syntax on
-set background=light
-colorscheme hemisu
-set t_Co=256            " use 256 colors in terminal vim
+set termguicolors
+set background=dark
+colorscheme solarized8 
+"set t_Co=256            " use 256 colors in terminal vim
 
 filetype plugin indent on       " turn on filetype, filetype plugins, and filetype indent
 set backspace=indent,eol,start  " allow backspacing over everything in insert mode
