@@ -10,4 +10,7 @@
 ### Using zsh with oh-my-zsh
 
 * Install oh-my-zsh with `sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
+* Oh My ZSH replaces the ~/.zshrc file with its own and renames the existing .zshrc file to .zshrc.pre-oh-my-zsh.  Restore the .zshrc that is part of this repo.
+  * `rm .zshrc`
+  * `mv .zshrc.pre-oh-my-zsh .zshrc`
 * Make zsh the default shell with `chsh -s /usr/bin/zsh username`
