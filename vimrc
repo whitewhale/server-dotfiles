@@ -39,7 +39,6 @@ call vundle#end()  " required
 
 " colors
 syntax on
-set termguicolors
 set background=dark
 colorscheme solarized8 
 "set t_Co=256            " use 256 colors in terminal vim
