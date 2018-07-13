@@ -41,7 +41,7 @@ call vundle#end()  " required
 syntax on
 set background=dark
 colorscheme solarized8 
-"set t_Co=256            " use 256 colors in terminal vim
+set t_Co=256            " use 256 colors in terminal vim
 
 filetype plugin indent on       " turn on filetype, filetype plugins, and filetype indent
 set backspace=indent,eol,start  " allow backspacing over everything in insert mode
@@ -79,8 +79,8 @@ set hidden          " allows files in buffers to remain open
 set scrolloff=3     " maintains 3 lines below cursor as cursor moved outside viewport
 
 "set colorcolumn=120 " show column at 120 chars
-let &colorcolumn=join(range(120,999),",")
-highlight ColorColumn ctermbg=255 guibg=#eeeeee
+"let &colorcolumn=join(range(120,999),",")
+"highlight ColorColumn ctermbg=255 guibg=#eeeeee
 
 " `a returns to line and column marked by ma, and so is more usefull.  make it
 " easier to use, by swapping with '
