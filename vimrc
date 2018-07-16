@@ -79,8 +79,8 @@ set hidden          " allows files in buffers to remain open
 set scrolloff=3     " maintains 3 lines below cursor as cursor moved outside viewport
 
 "set colorcolumn=120 " show column at 120 chars
-"let &colorcolumn=join(range(120,999),",")
-"highlight ColorColumn ctermbg=255 guibg=#eeeeee
+let &colorcolumn=join(range(121,9999),",")
+highlight ColorColumn ctermbg=236 guibg=#303030
 
 " `a returns to line and column marked by ma, and so is more usefull.  make it
 " easier to use, by swapping with '
