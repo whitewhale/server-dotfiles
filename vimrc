@@ -140,6 +140,7 @@ autocmd FileType php setlocal noeol binary fileformat=dos
 "au BufRead,BufNewFile *.scss set filetype=scss.css       " read scss as css file
 "au BufRead,BufNewFile *.less set filetype=less.css       " read scss as css file
 au BufRead,BufNewFile *.phtml set filetype=php
+au BufNewFile,BufRead *.es6 set filetype=javascript
 
 " simplify moving between windows
 nnoremap <C-J> <C-W><C-J>
@@ -196,7 +197,7 @@ map <Leader>b :call JsBeautify()<cr>
 autocmd FileType javascript noremap <buffer>  <leader>b :call JsBeautify()<cr>
 autocmd FileType html noremap <buffer> <leader>b :call HtmlBeautify()<cr>
 autocmd FileType css noremap <buffer> <leader>b :call CSSBeautify()<cr>
-autocmd FileType less noremap <buffer> <leader>b :call CSSBeautify()<cr>
+autocmd FileType scss,less noremap <buffer> <leader>b :call CSSBeautify()<cr>
 
 " JsDoc
 map <Leader>jd :JsDoc<cr>
@@ -218,3 +219,5 @@ autocmd QuickFixCmdPost * nested cwindow | redraw!
 
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype yml setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype scss,css,less setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype html setlocal ts=2 sts=2 sw=2 expandtab
