@@ -3,7 +3,7 @@
 # change to directory script executes in
 cd "$(dirname "$0")"
 
-FILES=profile,aliases,paths,exports,bashrc,zshrc,vimrc
+FILES=profile,aliases,paths,exports,bashrc,zshrc,vimrc,tmux.conf
 CWD=$(pwd)
 
 IFS=','

@@ -4,7 +4,7 @@ unsetopt GLOBAL_RCS
 # oh my zsh - https://github.com/robbyrussell/oh-my-zsh
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="fishy"
-plugins=(git vi-mode docker)
+plugins=(git vi-mode fasd)
 source $ZSH/oh-my-zsh.sh
 DISABLE_AUTO_UPDATE="true"
 
@@ -16,3 +16,4 @@ for file in ~/.{exports,paths,zsh.env,aliases}; do
 done;
 unset file;
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
